@@ -1,4 +1,7 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 // Include your database connection file
 include('config.php');
 
@@ -15,31 +18,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Hash the password
     $hashed_password = password_hash($password, PASSWORD_BCRYPT);
 
-    // SQL query to check if the username or email already exists
-    $sql = "SELECT * FROM users WHERE username = :username OR email = :email";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([':username' => $username, ':email' => $email]);
+    // Check whether the username or email already exists
+    $sql = "SELECT id FROM users WHERE username = ? OR email = ?";
+    $stmt = $conn->prepare($sql);
+    if (!$stmt) {
+        die("Prepare failed: " . $conn->error);
+    }
+    $stmt->bind_param("ss", $username, $email);
+    if (!$stmt->execute()) {
+        die("Select failed: " . $stmt->error);
+    }
+    $result = $stmt->get_result();
 
-    if ($stmt->rowCount() > 0) {
-        // Username or email already exists
+    if ($result && $result->num_rows > 0) {
         echo "Username or Email already taken. Please try again.";
     } else {
-        // SQL query to insert new user
+        // Insert new user
         $sql = "INSERT INTO users (username, password, email, full_name, phone_number, address)
-                VALUES (:username, :password, :email, :full_name, :phone_number, :address)";
-        
-        // Prepare and execute the query
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute([
-            ':username' => $username,
-            ':password' => $hashed_password,
-            ':email' => $email,
-            ':full_name' => $full_name,
-            ':phone_number' => $phone_number,
-            ':address' => $address
-        ]);
+                VALUES (?, ?, ?, ?, ?, ?)";
 
-        echo "Account successfully created! <a href='login.html'>Login here</a>";
+        $stmt = $conn->prepare($sql);
+        if (!$stmt) {
+            die("Prepare failed: " . $conn->error);
+        }
+        $stmt->bind_param("ssssss", $username, $hashed_password, $email, $full_name, $phone_number, $address);
+        if (!$stmt->execute()) {
+            die("Insert failed: " . $stmt->error);
+        }
+
+        header("Location: login.html");
+        exit;
     }
 }
 ?>

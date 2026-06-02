@@ -42,7 +42,7 @@
       <option>Value 2</option>
     </select>
 
-    <button class="primary">Add to Cart</button>
+    <button id="addToCartBtn" class="primary" data-product-id="2" data-price="980">Add to Cart</button>
 
     <details>
       <summary><strong>FAQ Title</strong></summary>
@@ -127,6 +127,32 @@ logo.addEventListener('click', function(event) {
   setTimeout(() => {
     window.location.href = 'index.html';
   }, 200);
+});
+
+// add to cart handler (AJAX)
+document.getElementById('addToCartBtn').addEventListener('click', function() {
+  const btn = this;
+  const productId = btn.getAttribute('data-product-id');
+  fetch('add_to_cart.php', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams({ product_id: productId, quantity: 1 })
+  }).then(r => r.json()).then(data => {
+    if (data.success) {
+      alert('Added to cart');
+      // try to update cart badge if present
+      const badge = document.getElementById('cartBadge');
+      if (badge) {
+        const current = parseInt(badge.textContent) || 0;
+        badge.textContent = current + 1;
+      }
+    } else if (data.message) {
+      alert(data.message);
+    }
+  }).catch(err => {
+    console.error(err);
+    alert('Could not add to cart');
+  });
 });
 </script>
 

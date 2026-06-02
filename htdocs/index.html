@@ -61,10 +61,13 @@
 
       <!-- Icons -->
       <div class="d-flex gap-3 align-items-center">
-        <a href="cartpage.html" class="text-dark" aria-label="View cart" title="View cart">
-          <i class="bi bi-cart fs-6"></i>
+        <a href="cartpage.php" class="text-dark" aria-label="View cart" title="View cart">
+          <div class="position-relative">
+            <i class="bi bi-cart fs-6"></i>
+            <span id="cartBadge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.5rem;">0</span>
+          </div>
         </a>
-        <a href="signup.html" class="text-dark" aria-label="Open account page" title="Open account page">
+        <a href="profile.php" class="text-dark" aria-label="Open account page" title="Open account page">
           <i class="bi bi-person fs-6"></i>
         </a>
       </div>
@@ -86,7 +89,7 @@
   <div class="row g-4">
 
     <!-- Product 1 -->
-    <div class="col-12 col-sm-6 col-md-4">
+    <div class="col-12 col-sm-6 col-md-4 product-card" data-product-id="5">
       <div class="card h-100 text-center p-2 border-light rounded-4 shadow-sm">
         <img src="assets/Resistance-Bands.png" class="card-img-top mx-auto product-card-img" alt="Resistance Band">
         <div class="card-body py-2">
@@ -99,7 +102,7 @@
     </div>
 
     <!-- Product 2 -->
-    <div class="col-12 col-sm-6 col-md-4">
+    <div class="col-12 col-sm-6 col-md-4 product-card" data-product-id="6">
       <div class="card h-100 text-center p-2 border-light rounded-4 shadow-sm">
         <img src="assets/Jump-rope.png" class="card-img-top mx-auto product-card-img" alt="Jump Rope">
         <div class="card-body py-2">
@@ -112,7 +115,7 @@
     </div>
 
     <!-- Product 3 -->
-    <div class="col-12 col-sm-6 col-md-4">
+    <div class="col-12 col-sm-6 col-md-4 product-card" data-product-id="7">
       <div class="card h-100 text-center p-2 border-light rounded-4 shadow-sm">
         <img src="assets/Compression-Shirt.png" class="card-img-top mx-auto product-card-img" alt="Compression Jersey">
         <div class="card-body py-2">
@@ -125,7 +128,7 @@
     </div>
 
     <!-- Product 4 -->
-    <div class="col-12 col-sm-6 col-md-4">
+    <div class="col-12 col-sm-6 col-md-4 product-card" data-product-id="8">
       <div class="card h-100 text-center p-2 border-light rounded-4 shadow-sm">
         <img src="assets/sportsSunglasses.png" class="card-img-top mx-auto product-card-img" alt="Sunglasses">
         <div class="card-body py-2">
@@ -138,7 +141,7 @@
     </div>
 
     <!-- Product 5 -->
-    <div class="col-12 col-sm-6 col-md-4">
+    <div class="col-12 col-sm-6 col-md-4 product-card" data-product-id="9">
       <div class="card h-100 text-center p-2 border-light rounded-4 shadow-sm">
         <img src="assets/Agility-Ladder.png" class="card-img-top mx-auto product-card-img" alt="Agility Ladder">
         <div class="card-body py-2">
@@ -151,7 +154,7 @@
     </div>
 
     <!-- Product 6 -->
-    <div class="col-12 col-sm-6 col-md-4">
+    <div class="col-12 col-sm-6 col-md-4 product-card" data-product-id="10">
       <div class="card h-100 text-center p-2 border-light rounded-4 shadow-sm">
         <img src="assets/runningJacket.png" class="card-img-top mx-auto product-card-img" alt="Sports Jacket">
         <div class="card-body py-2">
@@ -164,7 +167,7 @@
     </div>
 
     <!-- Product 7 -->
-    <div class="col-12 col-sm-6 col-md-4">
+    <div class="col-12 col-sm-6 col-md-4 product-card" data-product-id="11">
       <div class="card h-100 text-center p-2 border-light rounded-4 shadow-sm">
         <img src="assets/Shades.png" class="card-img-top mx-auto product-card-img" alt="Yoga Mat">
         <div class="card-body py-2">
@@ -177,7 +180,7 @@
     </div>
 
     <!-- Product 8 -->
-    <div class="col-12 col-sm-6 col-md-4">
+    <div class="col-12 col-sm-6 col-md-4 product-card" data-product-id="12">
       <div class="card h-100 text-center p-2 border-light rounded-4 shadow-sm">
         <img src="assets/Hydro-Backpack.png" class="card-img-top mx-auto product-card-img" alt="Training Gloves">
         <div class="card-body py-2">
@@ -190,7 +193,7 @@
     </div>
 
     <!-- Product 9 -->
-    <div class="col-12 col-sm-6 col-md-4">
+    <div class="col-12 col-sm-6 col-md-4 product-card" data-product-id="13">
       <div class="card h-100 text-center p-2 border-light rounded-4 shadow-sm">
         <img src="assets/hydration.png" class="card-img-top mx-auto product-card-img" alt="Hydro Bottle">
         <div class="card-body py-2">
@@ -204,6 +207,42 @@
 
   </div>
 </div>
+
+<script>
+// Load current cart count on page load
+fetch('get_cart_count.php')
+  .then(r => r.json())
+  .then(data => {
+    const badge = document.getElementById('cartBadge');
+    if (badge) badge.textContent = data.count || 0;
+  });
+
+// Delegated handler: convert 'Buy Now' buttons in product cards into Add-to-Cart actions
+document.querySelectorAll('.product-card').forEach(card => {
+  const btn = card.querySelector('a.btn');
+  if (!btn) return;
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    const pid = card.getAttribute('data-product-id');
+    
+    if (!pid) return;
+
+    fetch('add_to_cart.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({ product_id: pid, quantity: 1 })
+    }).then(r => r.json()).then(data => {
+      if (data.success) {
+        alert('Added to cart');
+        const badge = document.getElementById('cartBadge');
+        if (badge) badge.textContent = (parseInt(badge.textContent)||0) + 1;
+      } else {
+        alert(data.message || 'Could not add to cart');
+      }
+    }).catch(err => { console.error(err); alert('Could not add to cart'); });
+  });
+});
+</script>
 
 
 

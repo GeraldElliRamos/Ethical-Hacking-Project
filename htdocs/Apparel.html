@@ -32,7 +32,10 @@
         <button type="submit" class="search-button" aria-label="Search products" title="Search products"><i class="fas fa-search"></i></button>
       </div>
       <div class="cart-account">
-        <a href="cartpage.html" class="cart-icon" aria-label="View cart" title="View cart"><i class="fas fa-shopping-cart"></i></a>
+        <a href="cartpage.php" class="cart-icon position-relative" aria-label="View cart" title="View cart">
+          <i class="fas fa-shopping-cart"></i>
+          <span id="cartBadge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.6rem;">0</span>
+        </a>
         <a href="signup.html" class="account-icon" aria-label="Open account page" title="Open account page"><i class="fas fa-user"></i></a>
       </div>
     </div>
@@ -143,7 +146,7 @@
       <!-- Products Grid -->
       <div class="products-grid">
         <!-- Product 1 -->
-        <div class="product-card">
+        <div class="product-card" data-product-id="1" data-name="Hydration Backpack" data-image="assets/hydration.png" data-price="495">
           <img src="Assets/Hydro-Backpack.png" alt="Hydration Backpack">
           <div class="product-info">
             <h3>Hydration Backpack</h3>
@@ -152,11 +155,12 @@
               <span class="review-count">(3.9)</span>
             </div>
             <div class="price">₱495</div>
+            <button class="add-to-cart btn btn-sm btn-primary mt-2">Add to Cart</button>
           </div>
         </div>
         
         <!-- Product 2 -->
-        <div class="product-card">
+        <div class="product-card" data-product-id="2" data-name="All-Weather Running Jacket" data-image="assets/runningJacket.png" data-price="980">
           <img src="Assets/runningJacket.png" alt="All-Weather Running Jacket">
           <div class="product-info">
             <h3>All-Weather Running Jacket</h3>
@@ -165,11 +169,12 @@
               <span class="review-count">(4.1)</span>
             </div>
             <div class="price">₱980</div>
+            <button class="add-to-cart btn btn-sm btn-primary mt-2">Add to Cart</button>
           </div>
         </div>
         
         <!-- Product 3 -->
-        <div class="product-card">
+        <div class="product-card" data-product-id="3" data-name="Agility Series Trail Shoes" data-image="assets/Agility-Shoes.png" data-price="1590">
           <img src="Assets/Agility-Shoes.png" alt="Agility Series Trail Shoes">
           <div class="product-info">
             <h3>Agility Series Trail Shoes</h3>
@@ -178,11 +183,12 @@
               <span class="review-count">(4.8)</span>
             </div>
             <div class="price"><span class="sale-price">₱1,590</span> <span class="original-price">₱2,450</span></div>
+            <button class="add-to-cart btn btn-sm btn-primary mt-2">Add to Cart</button>
           </div>
         </div>
         
         <!-- Product 4 -->
-        <div class="product-card">
+        <div class="product-card" data-product-id="4" data-name="Eclipse UV Shades" data-image="assets/Shades.png" data-price="450">
           <img src="Assets/Shades.png" alt="Eclipse UV Shades">
           <div class="product-info">
             <h3>Eclipse UV Shades</h3>
@@ -191,71 +197,7 @@
               <span class="review-count">(3.7)</span>
             </div>
             <div class="price">₱450 <span class="discount">-25%</span></div>
-          </div>
-        </div>
-        
-        <!-- Product 5 -->
-        <div class="product-card">
-          <img src="Assets/Compression-Shirt.png" alt="Men's Compression Quick-Dry Shirt">
-          <div class="product-info">
-            <h3>Men's Compression Quick-Dry Shirt</h3>
-            <div class="rating">
-              <span class="stars">★★★★☆</span>
-              <span class="review-count">(4.3)</span>
-            </div>
-            <div class="price">₱380</div>
-          </div>
-        </div>
-        
-        <!-- Product 6 -->
-        <div class="product-card">
-          <img src="Assets/Jump-rope.png" alt="Weighted Jump Rope">
-          <div class="product-info">
-            <h3>Weighted Jump Rope</h3>
-            <div class="rating">
-              <span class="stars">★★★☆☆</span>
-              <span class="review-count">(3.5)</span>
-            </div>
-            <div class="price">₱370 <span class="discount">-15%</span></div>
-          </div>
-        </div>
-        
-        <!-- Product 7 -->
-        <div class="product-card">
-          <img src="Assets/Resistance-Bands.png" alt="7-Piece Resistance Bands Set">
-          <div class="product-info">
-            <h3>7-Piece Resistance Bands Set</h3>
-            <div class="rating">
-              <span class="stars">★★★★☆</span>
-              <span class="review-count">(4.0)</span>
-            </div>
-            <div class="price">₱212 <span class="original-price">₱299</span> <span class="discount">-30%</span></div>
-          </div>
-        </div>
-        
-        <!-- Product 8 -->
-        <div class="product-card">
-          <img src="Assets/Adjustable-Dumbbell.png" alt="Adjustable Dumbbell Set">
-          <div class="product-info">
-            <h3>Adjustable Dumbbell Set</h3>
-            <div class="rating">
-              <span class="stars">★★★★☆</span>
-              <span class="review-count">(4.2)</span>
-            </div>
-            <div class="price">₱945</div>
-          </div>
-        </div>
-        
-        <!-- Product 9 -->
-        <div class="product-card">
-          <img src="Assets/Agility-Ladder.png" alt="Agility Ladder">
-          <div class="product-info">
-            <h3>Agility Ladder</h3>
-            <div class="rating">
-              <span class="stars">★★★★☆</span>
-              <span class="review-count">(4.4)</span>
-            </div>
-            <div class="price">₱180</div>
+            <button class="add-to-cart btn btn-sm btn-primary mt-2">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -339,6 +281,32 @@ const logo = document.getElementById('logo-container');
 logo.addEventListener('click', function(event) {
   event.preventDefault();
   window.location.href = 'index.html';
+});
+
+// Load current cart count on page load
+fetch('get_cart_count.php')
+  .then(r => r.json())
+  .then(data => {
+    const badge = document.getElementById('cartBadge');
+    if (badge) badge.textContent = data.count || 0;
+  });
+
+// attach add-to-cart handlers
+document.querySelectorAll('.product-card .add-to-cart').forEach(btn => {
+  btn.addEventListener('click', function() {
+    const card = this.closest('.product-card');
+    const pid = card.getAttribute('data-product-id');
+    fetch('add_to_cart.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({ product_id: pid, quantity: 1 })
+    }).then(r=>r.json()).then(data => {
+      if (data.success) {
+        const badge = document.getElementById('cartBadge');
+        if (badge) badge.textContent = (parseInt(badge.textContent)||0) + 1;
+      } else alert(data.message || 'Could not add to cart');
+    }).catch(()=>alert('Could not add to cart'));
+  });
 });
 </script>
 
