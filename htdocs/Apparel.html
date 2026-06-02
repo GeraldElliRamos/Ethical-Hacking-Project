@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Outdoor and Training Gear</title>
+  <link rel="stylesheet" href="Apparel.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Header -->
+<header id="header-container">
+  <div class="header-content">
+    <div id="logo-container">
+      <img src="Assets/1.png" alt="Logo" class="logo">
+    </div>
+    
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#" class="dropdown-toggle">Shop <i class="fas fa-chevron-down"></i></a></li>
+        <li><a href="#">On Sale</a></li>
+        <li><a href="#">New Arrivals</a></li>
+        <li><a href="#">Brands</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+    
+    <div class="search-cart">
+      <div class="search-box">
+        <input type="text" placeholder="Search for products...">
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </div>
+      <div class="cart-account">
+        <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+        <a href="#" class="account-icon"><i class="fas fa-user"></i></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content Area -->
+<div class="container">
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> / Outdoor and Training Gear
+  </div>
+
+  <div class="content-area">
+    <!-- Sidebar with Filters -->
+    <aside class="sidebar">
+      <h3>Filters</h3>
+      <div class="filter-section">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="#" class="active">Outdoor And Training Gear</a></li>
+          <li><a href="#">Exercise Equipment</a></li>
+          <li><a href="#">Outdoor Sports Wear</a></li>
+          <li><a href="#">Hydration Products</a></li>
+          <li><a href="#">Fitness Tracking</a></li>
+        </ul>
+      </div>
+
+      <div class="filter-section">
+        <h4>Apparel</h4>
+        <ul>
+          <li><a href="#">Women's</a></li>
+          <li><a href="#">Men's</a></li>
+          <li><a href="#">Footwear</a></li>
+          <li><a href="#">Headwear</a></li>
+        </ul>
+      </div>
+
+      <div class="filter-section">
+        <h4>Price</h4>
+        <div class="price-slider">
+          <input type="range" min="0" max="500" value="250" class="slider" id="priceRange">
+          <div class="price-values">
+            <span>₱0</span>
+            <span>₱500</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-section">
+        <h4>Colors</h4>
+        <div class="color-options">
+          <span class="color-circle" style="background-color: green;"></span>
+          <span class="color-circle" style="background-color: red;"></span>
+          <span class="color-circle" style="background-color: yellow;"></span>
+          <span class="color-circle" style="background-color: orange;"></span>
+          <span class="color-circle" style="background-color: cyan;"></span>
+          <span class="color-circle" style="background-color: blue;"></span>
+          <span class="color-circle" style="background-color: purple;"></span>
+          <span class="color-circle" style="background-color: pink;"></span>
+          <span class="color-circle" style="background-color: black;"></span>
+        </div>
+      </div>
+
+      <div class="filter-section">
+        <h4>Size</h4>
+        <div class="size-options">
+          <button class="size-btn">XS</button>
+          <button class="size-btn">S (Small)</button>
+          <button class="size-btn">Medium</button>
+          <button class="size-btn">L (Large)</button>
+          <button class="size-btn">XL (Large)</button>
+          <button class="size-btn">XXL Large</button>
+        </div>
+      </div>
+
+      <div class="filter-section">
+        <h4>Dress Style</h4>
+        <ul>
+          <li><a href="#">Casual</a></li>
+          <li><a href="#">Formal</a></li>
+          <li><a href="#">Party</a></li>
+          <li><a href="#">Sport</a></li>
+        </ul>
+      </div>
+
+      <button class="apply-filter">Apply Filter</button>
+    </aside>
+
+    <!-- Main Products Section -->
+    <div class="main-content">
+      <div class="page-title">
+        <h1>Outdoor and Training Gear</h1>
+        <div class="sorting-options">
+          <span>Showing 1-12 of 180 Products</span>
+          <div class="sort-dropdown">
+            <label>Sort by:</label>
+            <select name="sort">
+              <option value="popular">Most Popular</option>
+              <option value="newest">Newest</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+          <img src="Assets/Hydro-Backpack.png" alt="Hydration Backpack">
+          <div class="product-info">
+            <h3>Hydration Backpack</h3>
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span class="review-count">(3.9)</span>
+            </div>
+            <div class="price">₱495</div>
+          </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="product-card">
+          <img src="Assets/runningJacket.png" alt="All-Weather Running Jacket">
+          <div class="product-info">
+            <h3>All-Weather Running Jacket</h3>
+            <div class="rating">
+              <span class="stars">★★★★☆</span>
+              <span class="review-count">(4.1)</span>
+            </div>
+            <div class="price">₱980</div>
+          </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="product-card">
+          <img src="Assets/Agility-Shoes.png" alt="Agility Series Trail Shoes">
+          <div class="product-info">
+            <h3>Agility Series Trail Shoes</h3>
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span class="review-count">(4.8)</span>
+            </div>
+            <div class="price"><span class="sale-price">₱1,590</span> <span class="original-price">₱2,450</span></div>
+          </div>
+        </div>
+        
+        <!-- Product 4 -->
+        <div class="product-card">
+          <img src="Assets/Shades.png" alt="Eclipse UV Shades">
+          <div class="product-info">
+            <h3>Eclipse UV Shades</h3>
+            <div class="rating">
+              <span class="stars">★★★★☆</span>
+              <span class="review-count">(3.7)</span>
+            </div>
+            <div class="price">₱450 <span class="discount">-25%</span></div>
+          </div>
+        </div>
+        
+        <!-- Product 5 -->
+        <div class="product-card">
+          <img src="Assets/Compression-Shirt.png" alt="Men's Compression Quick-Dry Shirt">
+          <div class="product-info">
+            <h3>Men's Compression Quick-Dry Shirt</h3>
+            <div class="rating">
+              <span class="stars">★★★★☆</span>
+              <span class="review-count">(4.3)</span>
+            </div>
+            <div class="price">₱380</div>
+          </div>
+        </div>
+        
+        <!-- Product 6 -->
+        <div class="product-card">
+          <img src="Assets/Jump-rope.png" alt="Weighted Jump Rope">
+          <div class="product-info">
+            <h3>Weighted Jump Rope</h3>
+            <div class="rating">
+              <span class="stars">★★★☆☆</span>
+              <span class="review-count">(3.5)</span>
+            </div>
+            <div class="price">₱370 <span class="discount">-15%</span></div>
+          </div>
+        </div>
+        
+        <!-- Product 7 -->
+        <div class="product-card">
+          <img src="Assets/Resistance-Bands.png" alt="7-Piece Resistance Bands Set">
+          <div class="product-info">
+            <h3>7-Piece Resistance Bands Set</h3>
+            <div class="rating">
+              <span class="stars">★★★★☆</span>
+              <span class="review-count">(4.0)</span>
+            </div>
+            <div class="price">₱212 <span class="original-price">₱299</span> <span class="discount">-30%</span></div>
+          </div>
+        </div>
+        
+        <!-- Product 8 -->
+        <div class="product-card">
+          <img src="Assets/Adjustable-Dumbbell.png" alt="Adjustable Dumbbell Set">
+          <div class="product-info">
+            <h3>Adjustable Dumbbell Set</h3>
+            <div class="rating">
+              <span class="stars">★★★★☆</span>
+              <span class="review-count">(4.2)</span>
+            </div>
+            <div class="price">₱945</div>
+          </div>
+        </div>
+        
+        <!-- Product 9 -->
+        <div class="product-card">
+          <img src="Assets/Agility-Ladder.png" alt="Agility Ladder">
+          <div class="product-info">
+            <h3>Agility Ladder</h3>
+            <div class="rating">
+              <span class="stars">★★★★☆</span>
+              <span class="review-count">(4.4)</span>
+            </div>
+            <div class="price">₱180</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination">
+        <a href="#" class="prev-page"><i class="fas fa-angle-left"></i> Previous</a>
+        <div class="page-numbers">
+          <a href="#" class="active">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">...</a>
+          <a href="#">9</a>
+          <a href="#">10</a>
+        </div>
+        <a href="#" class="next-page">Next <i class="fas fa-angle-right"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Newsletter Section -->
+<div class="newsletter-section">
+  <div class="newsletter-content">
+    <h2>STAY UP TO DATE ABOUT OUR LATEST OFFERS</h2>
+    <div class="newsletter-form">
+      <input type="email" placeholder="Enter your email address">
+      <button type="submit">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img src="Assets/1.png" alt="Logo" class="logo">
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+    
+    <div class="footer-links">
+      <div class="footer-column">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Men's Gear</a></li>
+          <li><a href="#">Women's Gear</a></li>
+          <li><a href="#">Kids' Gear</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Best Sellers</a></li>
+          <li><a href="#">Discounts & Deals</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Customer Support</h3>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping and Returns</a></li>
+          <li><a href="#">Store Locator</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Add your JavaScript here
+const logo = document.getElementById('logo-container');
+logo.addEventListener('click', function(event) {
+  event.preventDefault();
+  window.location.href = 'index.html';
+});
+</script>
+
+</body>
+</html>

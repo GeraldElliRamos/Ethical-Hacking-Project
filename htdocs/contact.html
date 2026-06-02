@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contact.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm px-4 py-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="https://www.youtube.com/watch?v=xvFZjo5PgG0">
+        <img src="logo.jpg" style="height: 40px; width: auto;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" 
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3 fw-semibold text-secondary">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Shop ▼</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">On Sale</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">New Arrivals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Brands</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+
+        <form class="d-flex mx-4 flex-grow-1" role="search">
+          <div class="input-group">
+            <span class="input-group-text bg-light border-0" id="search-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11 6a5 5 0 1 1-1-3.874 5 5 0 0 1 1 3.874zM6 12a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"/>
+                <path d="M10.743 11.743l3.536 3.536-1.414 1.414-3.536-3.536 1.414-1.414z"/>
+              </svg>
+            </span>
+            <input class="form-control bg-light border-0" type="search" placeholder="Search for products..." aria-label="Search">
+          </div>
+        </form>
+
+        <div class="d-flex align-items-center gap-4">
+          <a href="#" class="text-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2h13.2l.4-2M5.4 5L6 19a2 2 0 002 2h8a2 2 0 002-2l.6-14M16 9h.01M8 9h.01"/>
+            </svg>
+          </a>
+
+          <a href="#" class="text-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" heig ht="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A8 8 0 0112 15a8 8 0 016.879 2.804M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="contact-section">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>Contact Information</h2>
+        <p>Say something to start a live chat!</p>
+        <ul>
+          <li><i class="bi bi-telephone-fill"></i> +63 999 3456 789</li>
+          <li><i class="bi bi-envelope-fill"></i> cunanan@gmail.com</li>
+          <li><i class="bi bi-geo-alt-fill"></i> 938 Aurora Blvd, Cubao, Quezon City, 1109 Metro Manila</li>
+        </ul>
+        <div class="social-icons">
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-discord"></i></a>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <form action="#">
+          <div class="form-line">
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="text" placeholder="Phone Number" value="+63 999 3456 789" required>
+          </div>
+
+          <div class="form-group">
+            <label>Select Subject:</label>
+            <div class="radio-group">
+              <label><input type="radio" name="subject" checked> General Inquiry</label>
+              <label><input type="radio" name="subject"> Support</label>
+              <label><input type="radio" name="subject"> Feedback</label>
+              <label><input type="radio" name="subject"> Others</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <textarea placeholder="Write your message..." required></textarea>
+          </div>
+
+          <button type="submit" class="send-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="logo.jpg  " alt="Company Logo">
+    </div>
+    <div class="footer-divider"></div>
+
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>Reach us</h4>
+        <ul>
+          <li><i class="bi bi-telephone-fill"></i> +63 012 3456 789</li>
+          <li><i class="bi bi-envelope-fill"></i> cunanan@gmail.com</li>
+          <li><i class="bi bi-geo-alt-fill"></i> 938 Aurora Blvd, Cubao, Quezon City, 1109 Metro Manila</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Blogs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Services</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Refund Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">TIPQC</a></li>
+          <li><a href="#">Downloads</a></li>
+          <li><a href="#">Forum</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col newsletter">
+        <h4>Keep Updated</h4>
+        <form action="#">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <p>* Will send you weekly updates for your better tool management.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

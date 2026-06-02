@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product Page</title>
+  <link rel="stylesheet" href="Product.css">
+</head>
+<body>
+
+<header id="header-container">
+  <div id="logo-container" style="cursor: pointer;">
+    <img src="1.png" alt="Logo" style="height:40px;">
+  </div>
+  <nav>
+    <a href="products.html">Products</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+    <a href="signin.html">Sign In</a>
+    <a href="register.html" class="button">Register</a>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="product-image">
+    <img src="runningJacket.png" alt="Running Jacket" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+  </div>
+  
+
+  <div class="product-details">
+    <h1>Running Jacket</h1>
+    <div class="tag">Tag</div>
+    <div class="price">₱50</div>
+
+    <select>
+      <option>Label 1</option>
+      <option>Label 2</option>
+    </select>
+
+    <select>
+      <option>Value 1</option>
+      <option>Value 2</option>
+    </select>
+
+    <button class="primary">Add to Cart</button>
+
+    <details>
+      <summary><strong>FAQ Title</strong></summary>
+      <p>Answer the frequently asked question in a simple sentence, a paragraph, or even a list.</p>
+    </details>
+  </div>
+</div>
+
+<section class="reviews-section">
+  <h2>All Reviews (45)</h2>
+
+  <div class="review">
+    <div class="stars">★★★★☆</div>
+    <div class="review-author">Samantha D.</div>
+    <p>"I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable."</p>
+  </div>
+
+  <div class="review">
+    <div class="stars">★★★☆☆</div>
+    <div class="review-author">Ethan R.</div>
+    <p>"Minimalistic, stylish, and well-fitted. A must-have for good design lovers."</p>
+  </div>
+
+  <div class="review">
+    <div class="stars">★★★★☆</div>
+    <div class="review-author">Liam K.</div>
+    <p>"Fusion of comfort and creativity. Wearing it feels like wearing a piece of art."</p>
+  </div>
+
+  <button class="primary">Write a Review</button>
+</section>
+
+<section class="newsletter">
+  <h3>Follow the latest trends</h3>
+  <p>With our daily newsletter</p>
+  <input type="email" placeholder="you@example.com">
+  <button>Subscribe</button>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h4>Shop</h4>
+      <a href="#">Men</a>
+      <a href="#">Women</a>
+      <a href="#">Kids</a>
+      <a href="#">Accessories</a>
+      <a href="#">New Arrivals</a>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <a href="#">About Us</a>
+      <a href="#">Careers</a>
+      <a href="#">Press</a>
+      <a href="#">Sustainability</a>
+    </div>
+    <div>
+      <h4>Support</h4>
+      <a href="#">Help Center</a>
+      <a href="#">Returns</a>
+      <a href="#">Order Status</a>
+      <a href="#">Shipping Info</a>
+    </div>
+    <div>
+      <h4>Follow Us</h4>
+      <a href="#"><img src="facebook-icon.svg" alt="Facebook" style="height:20px; vertical-align:middle;"> Facebook</a>
+      <a href="#"><img src="instagram-icon.svg" alt="Instagram" style="height:20px; vertical-align:middle;"> Instagram</a>
+      <a href="#"><img src="twitter-icon.svg" alt="Twitter" style="height:20px; vertical-align:middle;"> Twitter</a>
+      <a href="#"><img src="tiktok-icon.svg" alt="TikTok" style="height:20px; vertical-align:middle;"> TikTok</a>
+    </div>
+  </div>
+  <p style="text-align: center; font-size: 14px; margin-top: 20px;">© 2025 Summit Gear. All rights reserved.</p>
+</footer>
+
+<script>
+const logo = document.getElementById('logo-container');
+logo.addEventListener('click', function(event) {
+  event.preventDefault();
+  logo.style.transform = "scale(0.9)";
+  logo.style.transition = "transform 0.2s ease";
+
+  setTimeout(() => {
+    window.location.href = 'index.html';
+  }, 200);
+});
+</script>
+
+</body>
+</html>

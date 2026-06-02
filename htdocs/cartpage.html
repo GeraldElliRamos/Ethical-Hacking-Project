@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GS Shop - Your Cart</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="cartpage.css">
+</head>
+<body>
+
+    <div class="toast-container">
+        <div id="cartToast" class="custom-toast">
+            Cart updated successfully!
+        </div>
+        <div id="promoToast" class="custom-toast">
+            Promo code applied successfully!
+        </div>
+        <div id="errorToast" class="custom-toast">
+            Invalid promo code. Please try again.
+        </div>
+    </div>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="logo-text">SG</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="shopDropdown">
+                            Shop <i class="fas fa-chevron-down small"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">On Sale</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">New Arrivals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Brands</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+                <form class="d-flex me-3">
+                    <div class="input-group">
+                        <input class="form-control" type="search" placeholder="Search for products..." aria-label="Search">
+                        <button class="btn btn-outline-secondary" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+                <div class="d-flex">
+                    <a href="#" class="btn btn-link position-relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cartBadge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            3
+                        </span>
+                    </a>
+                    <a href="#" class="btn btn-link">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container mt-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-secondary">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Cart</li>
+            </ol>
+        </nav>
+    </div>
+
+
+    <div class="container mb-5">
+        <h1 class="cart-header">YOUR CART</h1>
+        
+        <div class="row">
+            <div class="col-lg-8">
+           
+                <div id="emptyCart" class="cart-empty">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>Your cart is empty</h3>
+                    <p>Looks like you haven't added any items to your cart yet.</p>
+                    <a href="#" class="btn">Continue Shopping</a>
+                </div>
+                
+    
+                <div id="cartItemsContainer">
+  
+                    <div class="cart-item row align-items-center" data-id="1">
+                        <div class="col-3 col-md-2">
+                            <img src="assets/hydration.png" alt="Hydration Backpack" class="item-image">
+                        </div>
+                        <div class="col-6 col-md-7 item-details">
+                            <h5>Hydration Backpack</h5>
+                            <p class="size mb-0">Size: Large</p>
+                            <p class="color mb-0">Color: Gray</p>
+                        </div>
+                        <div class="col-3 text-end">
+                            <p class="item-price">₱<span class="price-value">145</span></p>
+                            <div class="d-flex justify-content-end">
+                                <div class="quantity-control">
+                                    <button class="quantity-decrease">-</button>
+                                    <span class="quantity-value">1</span>
+                                    <button class="quantity-increase">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 text-end mt-2">
+                            <button class="remove-item">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+          
+                    <div class="cart-item row align-items-center" data-id="2">
+                        <div class="col-3 col-md-2">
+                            <img src="assets/runningJacket.png" alt="All-Weather Running Jacket" class="item-image">
+                        </div>
+                        <div class="col-6 col-md-7 item-details">
+                            <h5>All-Weather Running Jacket</h5>
+                            <p class="size mb-0">Size: Medium</p>
+                            <p class="color mb-0">Color: Brown</p>
+                        </div>
+                        <div class="col-3 text-end">
+                            <p class="item-price">₱<span class="price-value">180</span></p>
+                            <div class="d-flex justify-content-end">
+                                <div class="quantity-control">
+                                    <button class="quantity-decrease">-</button>
+                                    <span class="quantity-value">1</span>
+                                    <button class="quantity-increase">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 text-end mt-2">
+                            <button class="remove-item">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                  
+                    <div class="cart-item row align-items-center" data-id="3">
+                        <div class="col-3 col-md-2">
+                            <img src="assets/sportsSunglasses.png" alt="Aropec SG-Ts5881 Sports Sunglasses" class="item-image">
+                        </div>
+                        <div class="col-6 col-md-7 item-details">
+                            <h5>Aropec SG-Ts5881 Sports Sunglasses</h5>
+                            <p class="size mb-0">Size: Large</p>
+                            <p class="color mb-0">Color: Black</p>
+                        </div>
+                        <div class="col-3 text-end">
+                            <p class="item-price">₱<span class="price-value">240</span></p>
+                            <div class="d-flex justify-content-end">
+                                <div class="quantity-control">
+                                    <button class="quantity-decrease">-</button>
+                                    <span class="quantity-value">1</span>
+                                    <button class="quantity-increase">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 text-end mt-2">
+                            <button class="remove-item">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mt-4 mt-lg-0">
+                <div class="order-summary">
+                    <h4>Order Summary</h4>
+                    
+                    <div class="summary-item">
+                        <span>Subtotal</span>
+                        <span>₱<span id="subtotal">565</span></span>
+                    </div>
+                    
+                    <div class="summary-item discount">
+                        <span>Discount (<span id="discountPercent">-20</span>%)</span>
+                        <span>-₱<span id="discountAmount">113</span></span>
+                    </div>
+                    
+                    <div class="summary-item">
+                        <span>Delivery Fee</span>
+                        <span>₱<span id="deliveryFee">15</span></span>
+                    </div>
+                    
+                    <div class="summary-item total">
+                        <span>Total</span>
+                        <span>₱<span id="totalAmount">467</span></span>
+                    </div>
+                    
+                    <div class="promo-code">
+                        <input type="text" id="promoInput" placeholder="Add promo code" class="form-control">
+                        <button id="applyPromo">Apply</button>
+                    </div>
+                    
+                    <button id="checkoutBtn" class="checkout-btn">
+                        Go to Checkout <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <section class="newsletter">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2>STAY UP TO DATE ABOUT<br>OUR LATEST OFFERS</h2>
+                </div>
+                <div class="col-md-6">
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Enter your email address" class="form-control">
+                        <button class="btn btn-light ms-2" id="subscribeBtn">
+                            <i class="fas fa-envelope"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-logo">GS</div>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-links">
+                        <h5>Categories</h5>
+                        <ul>
+                            <li><a href="#">Men's Gear</a></li>
+                            <li><a href="#">Women's Gear</a></li>
+                            <li><a href="#">Kid's Gear</a></li>
+                            <li><a href="#">Footwear</a></li>
+                            <li><a href="#">Accessories</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-links">
+                        <h5>Explore</h5>
+                        <ul>
+                            <li><a href="#">New Arrivals</a></li>
+                            <li><a href="#">Best Sellers</a></li>
+                            <li><a href="#">Discounts & Deals</a></li>
+                            <li><a href="#">Size Guide</a></li>
+                            <li><a href="#">Gift Cards</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-links">
+                        <h5>Customer Support</h5>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Shipping and Returns</a></li>
+                            <li><a href="#">Store Locator</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="cartpage.js">
+    </script>
+</body>
+</html>
