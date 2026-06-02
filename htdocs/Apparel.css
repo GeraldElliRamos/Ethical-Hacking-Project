@@ -205,6 +205,26 @@
     border-radius: 50%;
     cursor: pointer;
   }
+
+  .color-green { background-color: green; }
+  .color-red { background-color: red; }
+  .color-yellow { background-color: yellow; }
+  .color-orange { background-color: orange; }
+  .color-cyan { background-color: cyan; }
+  .color-blue { background-color: blue; }
+  .color-purple { background-color: purple; }
+  .color-pink { background-color: pink; }
+  .color-black { background-color: black; }
+
+  .search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .logo-image {
+    height: 30px;
+  }
   
   .size-options {
     display: flex;

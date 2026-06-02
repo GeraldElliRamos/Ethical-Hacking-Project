@@ -115,6 +115,25 @@ button.send-btn:hover {
     margin-bottom: 20px;
 }
 
+.navbar-logo {
+    height: 40px;
+    width: auto;
+}
+
+.footer-logo-image {
+    width: 50px;
+}
+
+.footer-note {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.contact-social-link {
+    color: inherit;
+}
+
 .footer-divider {
     border: 1px solid #333;
     margin: 20px auto;
@@ -185,6 +204,19 @@ button.send-btn:hover {
 
 .newsletter button:hover {
     background-color: #555;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.select-field {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
 }
 
 .newsletter p {

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Gear Summit</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <style>
     .hero-section {
       background: url('./assets/banner.png') center/cover no-repeat;
@@ -28,6 +29,9 @@
     .footer-small {
       font-size: 0.85rem;
     }
+    .product-card-img {
+      width: 80px;
+    }
   </style>
 </head>
 <body class="bg-light">
@@ -38,15 +42,15 @@
     <a class="navbar-brand" href="index.html">
       <img src="./assets/Logo.png" alt="Gear Summit Logo" height="35">
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" title="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-medium">
         <li class="nav-item"><a class="nav-link" href="Apparel.html">Shop ▼</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">On Sale</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">New Arrivals</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Brands</a></li>
+        <li class="nav-item"><a class="nav-link" href="Product.html">On Sale</a></li>
+        <li class="nav-item"><a class="nav-link" href="Product.html">New Arrivals</a></li>
+        <li class="nav-item"><a class="nav-link" href="Product.html">Brands</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
       </ul>
 
@@ -57,10 +61,10 @@
 
       <!-- Icons -->
       <div class="d-flex gap-3 align-items-center">
-        <a href="cartpage.html" class="text-dark">
+        <a href="cartpage.html" class="text-dark" aria-label="View cart" title="View cart">
           <i class="bi bi-cart fs-6"></i>
         </a>
-        <a href="signup.html" class="text-dark">
+        <a href="signup.html" class="text-dark" aria-label="Open account page" title="Open account page">
           <i class="bi bi-person fs-6"></i>
         </a>
       </div>
@@ -84,7 +88,7 @@
     <!-- Product 1 -->
     <div class="col-12 col-sm-6 col-md-4">
       <div class="card h-100 text-center p-2 border-light rounded-4 shadow-sm">
-        <img src="assets/Resistance-Bands.png" class="card-img-top mx-auto" alt="Resistance Band" style="width: 80px;">
+        <img src="assets/Resistance-Bands.png" class="card-img-top mx-auto product-card-img" alt="Resistance Band">
         <div class="card-body py-2">
           <h6 class="fw-semibold mb-1">Resistance Band Set</h6>
           <p class="mb-1">₱212 <span class="text-warning">5.0★</span></p>
@@ -97,7 +101,7 @@
     <!-- Product 2 -->
     <div class="col-12 col-sm-6 col-md-4">
       <div class="card h-100 text-center p-2 border-light rounded-4 shadow-sm">
-        <img src="assets/Jump-rope.png" class="card-img-top mx-auto" alt="Jump Rope" style="width: 80px;">
+        <img src="assets/Jump-rope.png" class="card-img-top mx-auto product-card-img" alt="Jump Rope">
         <div class="card-body py-2">
           <h6 class="fw-semibold mb-1">Weighted Jump Rope</h6>
           <p><span class="text-muted text-decoration-line-through">₱160</span> ₱130 <span class="text-danger">-30%</span> <span class="text-warning">4.5★</span></p>
@@ -110,7 +114,7 @@
     <!-- Product 3 -->
     <div class="col-12 col-sm-6 col-md-4">
       <div class="card h-100 text-center p-2 border-light rounded-4 shadow-sm">
-        <img src="assets/Compression-Shirt.png" class="card-img-top mx-auto" alt="Compression Jersey" style="width: 80px;">
+        <img src="assets/Compression-Shirt.png" class="card-img-top mx-auto product-card-img" alt="Compression Jersey">
         <div class="card-body py-2">
           <h6 class="fw-semibold mb-1">Compression Jersey Set</h6>
           <p><span class="text-muted text-decoration-line-through">₱90</span> ₱65 <span class="text-danger">-20%</span> <span class="text-warning">4.5★</span></p>
@@ -123,7 +127,7 @@
     <!-- Product 4 -->
     <div class="col-12 col-sm-6 col-md-4">
       <div class="card h-100 text-center p-2 border-light rounded-4 shadow-sm">
-        <img src="assets/sportsSunglasses.png" class="card-img-top mx-auto" alt="Sunglasses" style="width: 80px;">
+        <img src="assets/sportsSunglasses.png" class="card-img-top mx-auto product-card-img" alt="Sunglasses">
         <div class="card-body py-2">
           <h6 class="fw-semibold mb-1">Sports Sunglasses</h6>
           <p><span class="text-muted text-decoration-line-through">₱260</span> ₱240 <span class="text-danger">-20%</span> <span class="text-warning">3.5★</span></p>
@@ -136,7 +140,7 @@
     <!-- Product 5 -->
     <div class="col-12 col-sm-6 col-md-4">
       <div class="card h-100 text-center p-2 border-light rounded-4 shadow-sm">
-        <img src="assets/Agility-Ladder.png" class="card-img-top mx-auto" alt="Agility Ladder" style="width: 80px;">
+        <img src="assets/Agility-Ladder.png" class="card-img-top mx-auto product-card-img" alt="Agility Ladder">
         <div class="card-body py-2">
           <h6 class="fw-semibold mb-1">Agility Ladder</h6>
           <p>₱80 <span class="text-warning">3.0★</span></p>
@@ -149,7 +153,7 @@
     <!-- Product 6 -->
     <div class="col-12 col-sm-6 col-md-4">
       <div class="card h-100 text-center p-2 border-light rounded-4 shadow-sm">
-        <img src="assets/runningJacket.png" class="card-img-top mx-auto" alt="Sports Jacket" style="width: 80px;">
+        <img src="assets/runningJacket.png" class="card-img-top mx-auto product-card-img" alt="Sports Jacket">
         <div class="card-body py-2">
           <h6 class="fw-semibold mb-1">Lightweight Sports Jacket</h6>
           <p>₱120 <span class="text-warning">3.0★</span></p>
@@ -162,7 +166,7 @@
     <!-- Product 7 -->
     <div class="col-12 col-sm-6 col-md-4">
       <div class="card h-100 text-center p-2 border-light rounded-4 shadow-sm">
-        <img src="assets/Shades.png" class="card-img-top mx-auto" alt="Yoga Mat" style="width: 80px;">
+        <img src="assets/Shades.png" class="card-img-top mx-auto product-card-img" alt="Yoga Mat">
         <div class="card-body py-2">
           <h6 class="fw-semibold mb-1">Premium Yoga Mat</h6>
           <p>₱180 <span class="text-warning">4.0★</span></p>
@@ -175,7 +179,7 @@
     <!-- Product 8 -->
     <div class="col-12 col-sm-6 col-md-4">
       <div class="card h-100 text-center p-2 border-light rounded-4 shadow-sm">
-        <img src="assets/Hydro-Backpack.png" class="card-img-top mx-auto" alt="Training Gloves" style="width: 80px;">
+        <img src="assets/Hydro-Backpack.png" class="card-img-top mx-auto product-card-img" alt="Training Gloves">
         <div class="card-body py-2">
           <h6 class="fw-semibold mb-1">Training Gloves</h6>
           <p>₱99 <span class="text-warning">4.2★</span></p>
@@ -188,7 +192,7 @@
     <!-- Product 9 -->
     <div class="col-12 col-sm-6 col-md-4">
       <div class="card h-100 text-center p-2 border-light rounded-4 shadow-sm">
-        <img src="assets/hydration.png" class="card-img-top mx-auto" alt="Hydro Bottle" style="width: 80px;">
+        <img src="assets/hydration.png" class="card-img-top mx-auto product-card-img" alt="Hydro Bottle">
         <div class="card-body py-2">
           <h6 class="fw-semibold mb-1">Hydro Steel Bottle</h6>
           <p>₱59 <span class="text-warning">4.8★</span></p>
@@ -224,11 +228,11 @@
       <div class="col-md-3">
         <h6>Categories</h6>
         <ul class="list-unstyled">
-          <li><a href="#" class="text-white text-decoration-none">Men’s Gear</a></li>
-          <li><a href="#" class="text-white text-decoration-none">Women’s Gear</a></li>
-          <li><a href="#" class="text-white text-decoration-none">Kid’s Gear</a></li>
-          <li><a href="#" class="text-white text-decoration-none">Footwear</a></li>
-          <li><a href="#" class="text-white text-decoration-none">Accessories</a></li>
+          <li><a href="Apparel.html" class="text-white text-decoration-none">Men’s Gear</a></li>
+          <li><a href="Apparel.html" class="text-white text-decoration-none">Women’s Gear</a></li>
+          <li><a href="Apparel.html" class="text-white text-decoration-none">Kid’s Gear</a></li>
+          <li><a href="Product.html" class="text-white text-decoration-none">Footwear</a></li>
+          <li><a href="Product.html" class="text-white text-decoration-none">Accessories</a></li>
         </ul>
       </div>
 
@@ -236,11 +240,11 @@
       <div class="col-md-3">
         <h6>Explore</h6>
         <ul class="list-unstyled">
-          <li><a href="#" class="text-white text-decoration-none">New Arrivals</a></li>
-          <li><a href="#" class="text-white text-decoration-none">Best Sellers</a></li>
-          <li><a href="#" class="text-white text-decoration-none">Discounts & Deals</a></li>
-          <li><a href="#" class="text-white text-decoration-none">Size Guide</a></li>
-          <li><a href="#" class="text-white text-decoration-none">Gift Cards</a></li>
+          <li><a href="Product.html" class="text-white text-decoration-none">New Arrivals</a></li>
+          <li><a href="Product.html" class="text-white text-decoration-none">Best Sellers</a></li>
+          <li><a href="Product.html" class="text-white text-decoration-none">Discounts &amp; Deals</a></li>
+          <li><a href="Product.html" class="text-white text-decoration-none">Size Guide</a></li>
+          <li><a href="Product.html" class="text-white text-decoration-none">Gift Cards</a></li>
         </ul>
       </div>
 
@@ -248,11 +252,11 @@
       <div class="col-md-3">
         <h6>Customer Support</h6>
         <ul class="list-unstyled">
-          <li><a href="#" class="text-white text-decoration-none">FAQ</a></li>
-          <li><a href="#" class="text-white text-decoration-none">Shipping & Returns</a></li>
-          <li><a href="#" class="text-white text-decoration-none">Store Locator</a></li>
-          <li><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
-          <li><a href="#" class="text-white text-decoration-none">Terms & Conditions</a></li>
+          <li><a href="contact.html" class="text-white text-decoration-none">FAQ</a></li>
+          <li><a href="contact.html" class="text-white text-decoration-none">Shipping &amp; Returns</a></li>
+          <li><a href="contact.html" class="text-white text-decoration-none">Store Locator</a></li>
+          <li><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
+          <li><a href="contact.html" class="text-white text-decoration-none">Terms &amp; Conditions</a></li>
         </ul>
       </div>
     </div>

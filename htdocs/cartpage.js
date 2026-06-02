@@ -81,8 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
 
     document.getElementById('checkoutBtn').addEventListener('click', function() {
-
-        alert('Proceeding to checkout!');
+        window.location.href = 'signup.html';
     });
     
 

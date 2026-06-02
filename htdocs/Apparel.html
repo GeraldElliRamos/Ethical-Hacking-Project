@@ -13,27 +13,27 @@
 <header id="header-container">
   <div class="header-content">
     <div id="logo-container">
-      <img src="Assets/1.png" alt="Logo" class="logo">
+      <img src="assets/Logo.png" alt="Gear Summit Logo" class="logo logo-image">
     </div>
     
     <nav class="main-nav">
       <ul>
-        <li><a href="#" class="dropdown-toggle">Shop <i class="fas fa-chevron-down"></i></a></li>
-        <li><a href="#">On Sale</a></li>
-        <li><a href="#">New Arrivals</a></li>
-        <li><a href="#">Brands</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li><a href="Apparel.html" class="dropdown-toggle">Shop <i class="fas fa-chevron-down"></i></a></li>
+        <li><a href="Product.html">On Sale</a></li>
+        <li><a href="Product.html">New Arrivals</a></li>
+        <li><a href="Product.html">Brands</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </nav>
     
     <div class="search-cart">
       <div class="search-box">
-        <input type="text" placeholder="Search for products...">
-        <button type="submit"><i class="fas fa-search"></i></button>
+        <input type="text" placeholder="Search for products..." aria-label="Search products">
+        <button type="submit" class="search-button" aria-label="Search products" title="Search products"><i class="fas fa-search"></i></button>
       </div>
       <div class="cart-account">
-        <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
-        <a href="#" class="account-icon"><i class="fas fa-user"></i></a>
+        <a href="cartpage.html" class="cart-icon" aria-label="View cart" title="View cart"><i class="fas fa-shopping-cart"></i></a>
+        <a href="signup.html" class="account-icon" aria-label="Open account page" title="Open account page"><i class="fas fa-user"></i></a>
       </div>
     </div>
   </div>
@@ -74,7 +74,7 @@
       <div class="filter-section">
         <h4>Price</h4>
         <div class="price-slider">
-          <input type="range" min="0" max="500" value="250" class="slider" id="priceRange">
+          <input type="range" min="0" max="500" value="250" class="slider" id="priceRange" aria-label="Price range filter" title="Price range filter">
           <div class="price-values">
             <span>₱0</span>
             <span>₱500</span>
@@ -85,15 +85,15 @@
       <div class="filter-section">
         <h4>Colors</h4>
         <div class="color-options">
-          <span class="color-circle" style="background-color: green;"></span>
-          <span class="color-circle" style="background-color: red;"></span>
-          <span class="color-circle" style="background-color: yellow;"></span>
-          <span class="color-circle" style="background-color: orange;"></span>
-          <span class="color-circle" style="background-color: cyan;"></span>
-          <span class="color-circle" style="background-color: blue;"></span>
-          <span class="color-circle" style="background-color: purple;"></span>
-          <span class="color-circle" style="background-color: pink;"></span>
-          <span class="color-circle" style="background-color: black;"></span>
+          <span class="color-circle color-green"></span>
+          <span class="color-circle color-red"></span>
+          <span class="color-circle color-yellow"></span>
+          <span class="color-circle color-orange"></span>
+          <span class="color-circle color-cyan"></span>
+          <span class="color-circle color-blue"></span>
+          <span class="color-circle color-purple"></span>
+          <span class="color-circle color-pink"></span>
+          <span class="color-circle color-black"></span>
         </div>
       </div>
 
@@ -130,7 +130,7 @@
           <span>Showing 1-12 of 180 Products</span>
           <div class="sort-dropdown">
             <label>Sort by:</label>
-            <select name="sort">
+            <select name="sort" aria-label="Sort products" title="Sort products">
               <option value="popular">Most Popular</option>
               <option value="newest">Newest</option>
               <option value="price-low">Price: Low to High</option>
@@ -292,12 +292,12 @@
 <footer>
   <div class="footer-content">
     <div class="footer-logo">
-      <img src="Assets/1.png" alt="Logo" class="logo">
+      <img src="assets/Logo.png" alt="Logo" class="logo logo-image">
       <div class="social-icons">
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#" aria-label="Twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
     
@@ -305,28 +305,28 @@
       <div class="footer-column">
         <h3>Categories</h3>
         <ul>
-          <li><a href="#">Men's Gear</a></li>
-          <li><a href="#">Women's Gear</a></li>
-          <li><a href="#">Kids' Gear</a></li>
+          <li><a href="Apparel.html">Men's Gear</a></li>
+          <li><a href="Apparel.html">Women's Gear</a></li>
+          <li><a href="Apparel.html">Kids' Gear</a></li>
         </ul>
       </div>
       
       <div class="footer-column">
         <h3>Explore</h3>
         <ul>
-          <li><a href="#">New Arrivals</a></li>
-          <li><a href="#">Best Sellers</a></li>
-          <li><a href="#">Discounts & Deals</a></li>
+          <li><a href="Product.html">New Arrivals</a></li>
+          <li><a href="Product.html">Best Sellers</a></li>
+          <li><a href="Product.html">Discounts &amp; Deals</a></li>
         </ul>
       </div>
       
       <div class="footer-column">
         <h3>Customer Support</h3>
         <ul>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Shipping and Returns</a></li>
-          <li><a href="#">Store Locator</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="contact.html">FAQ</a></li>
+          <li><a href="contact.html">Shipping and Returns</a></li>
+          <li><a href="contact.html">Store Locator</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
     </div>
