@@ -28,13 +28,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user = $result ? $result->fetch_assoc() : null;
 
     if (!$user) {
+        sleep(2); // Slow down brute force attempts
         die('No account found for that username or email.');
     }
 
     if (!password_verify($password, $user['password'])) {
+        sleep(2); // Slow down brute force attempts
         die('Incorrect password.');
     }
 
+    // Prevent Session Fixation
+    session_regenerate_id(true);
     $_SESSION['user_id'] = $user['id'];
     $_SESSION['username'] = $user['username'];
     $_SESSION['email'] = $user['email'];

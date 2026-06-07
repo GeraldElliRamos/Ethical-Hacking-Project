@@ -8,12 +8,21 @@ include('config.php');
 // Check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Sanitize and get user input
-    $username = htmlspecialchars($_POST['username']);
-    $email = htmlspecialchars($_POST['email']);
+    $username = $_POST['username'];
+    $email = $_POST['email'];
     $password = $_POST['password'];
-    $full_name = htmlspecialchars($_POST['full_name']);
-    $phone_number = htmlspecialchars($_POST['phone_number']);
-    $address = htmlspecialchars($_POST['address']);
+    $full_name = $_POST['full_name'];
+    $phone_number = $_POST['phone_number'];
+    $address = $_POST['address'];
+
+    // Basic Validation
+    if (empty($username) || empty($email) || empty($password)) {
+        die("Username, Email, and Password are required.");
+    }
+
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        die("Invalid email format.");
+    }
 
     // Hash the password
     $hashed_password = password_hash($password, PASSWORD_BCRYPT);
